@@ -7,7 +7,7 @@
     <meta name="description" content="">
     <meta name="author" content="Mark Otto, Jacob Thornton, and Bootstrap contributors">
     <meta name="generator" content="Hugo 0.108.0">
-    <title>Album example · Bootstrap v5.3</title>
+    <title>Album - Gianluca Cobucci</title>
 
     <link rel="canonical" href="https://getbootstrap.com/docs/5.3/examples/album/">
     <link href="../assets/dist/css/bootstrap.min.css" rel="stylesheet">
@@ -67,49 +67,102 @@
             -webkit-overflow-scrolling: touch;
         }
 
-        .album-preferiti {
-
+        .album-preferiti, .card-body h4,h5 {
             text-align: center;  
-
         }
+
+        .bd-placeholder-img {
+            font-size: 1.125rem;
+            text-anchor: middle;
+            -webkit-user-select: none;
+            -moz-user-select: none;
+            user-select: none;
+        }
+
+        @media (min-width: 768px) {
+            .bd-placeholder-img-lg {
+            font-size: 3.5rem;
+            }
+        }
+
+        .b-example-divider {
+            height: 3rem;
+            background-color: rgba(0, 0, 0, .1);
+            border: solid rgba(0, 0, 0, .15);
+            border-width: 1px 0;
+            box-shadow: inset 0 .5em 1.5em rgba(0, 0, 0, .1), inset 0 .125em .5em rgba(0, 0, 0, .15);
+        }
+
+        .b-example-vr {
+            flex-shrink: 0;
+            width: 1.5rem;
+            height: 100vh;
+        }
+
+        .bi {
+            vertical-align: -.125em;
+            fill: currentColor;
+        }
+
+        .nav-scroller {
+            position: relative;
+            z-index: 2;
+            height: 2.75rem;
+            overflow-y: hidden;
+        }
+
+        .nav-scroller .nav {
+            display: flex;
+            flex-wrap: nowrap;
+            padding-bottom: 1rem;
+            margin-top: -1px;
+            overflow-x: auto;
+            text-align: center;
+            white-space: nowrap;
+            -webkit-overflow-scrolling: touch;
+        }
+        
+        .nav-item p {
+            font-size: 20px;
+            margin: auto;
+            height: 100%;
+            margin: 0;
+            padding: 0;
+        }
+  
     </style>
 </head>
 
 <body>
 
     <header>
-        <div class="collapse bg-dark" id="navbarHeader">
-            <div class="container">
-                <div class="row">
-                    <div class="col-sm-8 col-md-7 py-4">
-                        <h4 class="text-white">About</h4>
-                        <p class="text-muted">Add some information about the album below, the author, or any other
-                            background context. Make it a few sentences long so folks can pick up some informative
-                            tidbits. Then, link them off to some social networking sites or contact information.
-                        </p>
-                    </div>
-                    <div class="col-sm-4 offset-md-1 py-4">
-                        <h4 class="text-white">Contact</h4>
-                        <ul class="list-unstyled">
-                            <li><a href="#" class="text-white">Follow on Twitter</a></li>
-                            <li><a href="#" class="text-white">Like on Facebook</a></li>
-                            <li><a href="#" class="text-white">Email me</a></li>
-                        </ul>
-                    </div>
-                </div>
+
+        <nav class="navbar navbar-expand-md navbar-dark fixed-top bg-dark">
+            <div class="container-fluid">
+              <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse"
+                aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+              </button>
+              <div class="collapse navbar-collapse" id="navbarCollapse">
+                <ul class="navbar-nav me-auto mb-2 mb-md-0">
+                  <li class="nav-item">
+                    <a class="nav-link active" aria-current="page" href="#"><p>Home</p></a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link active" href="#album_preferiti"><p>Album preferiti</p></a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link active" href="#album_non_preferiti"><p>Album che non amo</p></a>
+                  </li>
+                </ul>
+                <form class="d-flex" role="search">
+                  <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+                  <button class="btn btn-outline-success" type="submit">Search</button>
+                </form>
+              </div>
             </div>
-        </div>
-        <div class="navbar navbar-dark bg-dark shadow-sm">
-            <div class="container">
-                <a href="#" class="navbar-brand d-flex align-items-center">
-                    <strong>Album</strong>
-                </a>
-                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarHeader"
-                    aria-controls="navbarHeader" aria-expanded="false" aria-label="Toggle navigation">
-                    <span class="navbar-toggler-icon"></span>
-                </button>
-            </div>
-        </div>
+        </nav>
+
     </header>
 
     <main>
@@ -117,21 +170,19 @@
         <section class="py-5 text-center container">
             <div class="row py-lg-5">
                 <div class="col-lg-6 col-md-8 mx-auto">
-                    <h1 class="fw-light">Album example</h1>
-                    <p class="lead text-muted">Something short and leading about the collection below—its contents, the
-                        creator, etc. Make it short and sweet, but not too short so folks don’t simply skip over it
-                        entirely.
+                    <h1 class="fw-light">La musica che amo</h1>
+                    <p class="lead text-muted">Ciao e benvenuti a tutti! Questo è il mio spazio personale dove esprimo quale musica mi piace, con tanto di album e autori.
                     </p>
                     <p>
-                        <a href="#" class="btn btn-primary my-2">Main call to action</a>
-                        <a href="#" class="btn btn-secondary my-2">Secondary action</a>
+                        <a href="#" class="btn btn-primary my-2">Offrimi un caffè</a>
+                        <a href="https://open.spotify.com/user/1168543427?si=12cd5eec853a49f8" class="btn btn-secondary my-2">Vai al mio Spotify!</a>
                     </p>
                 </div>
             </div>
         </section>
 
         <div class="album-preferiti">
-            <h2>Album preferiti</h2>
+            <a name="album_preferiti"><h2>Album preferiti</h2></a>
         </div>
 
         <div class="album py-5 bg-light">
@@ -140,13 +191,17 @@
 
                 <div class="row row-cols-1 row-cols-sm-2 row-cols-md-3 g-3">
 
-                    <div class="col">
+                    <div class="col-lg-4 col-md-3 col-xs-2">
 
                         <div class="card shadow-sm">
 
-                            <img width="100%" height="225">
+                            <img src="/epicodePublic/assets/caparezza-exuvia-cover-album.jpg" width="100%" height="100%">
 
                             <div class="card-body">
+
+                                <h4>Exuvia</h4>
+
+                                <h5>Caparezza</h5>
 
                                 <p class="card-text">This is a wider card with supporting text below as a natural
                                     lead-in to additional content. This content is a little bit longer.
@@ -161,7 +216,7 @@
 
                                     </div>
 
-                                    <small class="text-muted">9 mins</small>
+                                    <small><strong>Durata album: 60:34</strong></small>
 
                                 </div>
 
@@ -171,13 +226,17 @@
 
                     </div>
 
-                  <div class="col">
+    
+                    <div class="col-lg-4 col-md-3 col-xs-2">
 
                         <div class="card shadow-sm">
 
-                            <img width="100%" height="225">
+                            <img src="/epicodePublic/assets/metallica-master-of-puppets-album-audioteka.jpg" width="100%" height="100%">
 
                             <div class="card-body">
+
+                                <h4>Master of Puppets</h4>
+                                <h5>Metallica</h5>
 
                                 <p class="card-text">This is a wider card with supporting text below as a natural
                                     lead-in to additional content. This content is a little bit longer.
@@ -192,7 +251,7 @@
 
                                     </div>
 
-                                    <small class="text-muted">9 mins</small>
+                                    <small><strong>Durata album: 54:45</strong></small>
 
                                 </div>
 
@@ -202,13 +261,16 @@
                         
                     </div>
 
-                    <div class="col">
+                    <div class="col-lg-4 col-md-3 col-xs-2">
 
                         <div class="card shadow-sm">
 
-                            <img width="100%" height="225">
+                            <img src="/epicodePublic/assets/tenacious-d-pick.jpg" width="100%" height="100%">
 
                             <div class="card-body">
+
+                                <h4>The Pick of Destiny</h4>
+                                <h5>Tenacious D</h5>
 
                                 <p class="card-text">This is a wider card with supporting text below as a natural
                                     lead-in to additional content. This content is a little bit longer.
@@ -223,7 +285,42 @@
 
                                     </div>
 
-                                    <small class="text-muted">9 mins</small>
+                                    <small><strong>Durata album: 33:47</strong></small>
+
+                                </div>
+
+                            </div>
+
+                        </div>
+                        
+                    </div>
+
+                    <div class="col-lg-4 col-md-3 col-xs-2">
+
+                        <div class="card shadow-sm">
+
+                            <img src="/epicodePublic/assets/papa-roach.jpeg" width="100%" height="100%">
+
+                            <div class="card-body">
+
+                                <h4>Infest</h4>
+                                <h5>Papa Roach</h5>
+
+                                <p class="card-text">This is a wider card with supporting text below as a natural
+                                    lead-in to additional content. This content is a little bit longer.
+                                </p>
+
+                                <div class="d-flex justify-content-between align-items-center">
+
+                                    <div class="btn-group">
+
+                                        <button type="button" class="btn btn-sm btn-outline-secondary">View</button>
+                                        <button type="button" class="btn btn-sm btn-outline-secondary">Edit</button>
+
+                                    </div>
+
+                                    <small><strong>Durata album: 45:50</strong></small>
+
 
                                 </div>
 
@@ -240,7 +337,7 @@
         </div>
 
         <div class="album-preferiti">
-            <h2>Album che non amo</h2>
+            <a name="album_non_preferiti"><h2>Album che non amo</h2></a>
         </div>
 
         <div class="album py-5 bg-light">
@@ -253,9 +350,12 @@
 
                         <div class="card shadow-sm">
 
-                            <img width="100%" height="225">
+                            <img src="/epicodePublic/assets/gigi-alessio-album.jpg" width="100%" height="100%">
 
                             <div class="card-body">
+
+                                <h4>Uno come te</h4>
+                                <h5>Gigi D'Alessio</h5>
 
                                 <p class="card-text">This is a wider card with supporting text below as a natural
                                     lead-in to additional content. This content is a little bit longer.
@@ -270,7 +370,7 @@
 
                                     </div>
 
-                                    <small class="text-muted">9 mins</small>
+                                    <small><strong>Durata album: 57:56</strong></small>
 
                                 </div>
 
@@ -284,9 +384,12 @@
 
                         <div class="card shadow-sm">
 
-                            <img width="100%" height="225">
+                            <img src="/epicodePublic/assets/nino-dangelo.jpeg" width="100%" height="100%">
 
                             <div class="card-body">
+
+                                <h4>Primmo ammore</h4>
+                                <h5>Nino D'Angelo</h5>
 
                                 <p class="card-text">This is a wider card with supporting text below as a natural
                                     lead-in to additional content. This content is a little bit longer.
@@ -301,7 +404,7 @@
 
                                     </div>
 
-                                    <small class="text-muted">9 mins</small>
+                                    <small><strong>Durata album: 45:54</strong></small>
 
                                 </div>
 
@@ -315,9 +418,12 @@
 
                         <div class="card shadow-sm">
 
-                            <img width="100%" height="225">
+                            <img src="/epicodePublic/assets/daddy-yankee.jpg" width="100%" height="100%">
 
                             <div class="card-body">
+
+                                <h4>Mundial</h4>
+                                <h5>Daddy Yankee</h5>
 
                                 <p class="card-text">This is a wider card with supporting text below as a natural
                                     lead-in to additional content. This content is a little bit longer.
@@ -332,7 +438,7 @@
 
                                     </div>
 
-                                    <small class="text-muted">9 mins</small>
+                                    <small><strong>Durata album: 41:03</strong></small>
 
                                 </div>
 
@@ -352,14 +458,27 @@
     </main>
 
     <footer class="text-muted py-5">
+
         <div class="container">
+
             <p class="float-end mb-1">
+
                 <a href="#">Back to top</a>
+
             </p>
+
             <p class="mb-1">Album example is &copy; Bootstrap, but please download and customize it for yourself!</p>
-            <p class="mb-0">New to Bootstrap? <a href="/">Visit the homepage</a> or read our <a
-                    href="../getting-started/introduction/">getting started guide</a>.</p>
+
+            <p class="mb-0">New to Bootstrap? 
+
+                <a href="/">Visit the homepage</a> 
+                or read our 
+                <a href="../getting-started/introduction/">getting started guide</a>
+
+            </p>
+
         </div>
+
     </footer>
 
 
