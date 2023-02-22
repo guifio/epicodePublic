@@ -849,7 +849,8 @@
 
     <footer class="footer mt-auto py-3 bg-light">
         <div class="container">
-          <span class="text-muted">Place sticky footer content here.</span>
+            <p>Il numero di album nella pagina è: <span id="image-counter"></span>.</p>
+
         </div>
     </footer>
 
@@ -883,6 +884,15 @@
         }
           
         toggleButton1.addEventListener('click', toggleAlbumNonPreferiti);
+
+        
+        //funzione conta album
+        window.onload = function countImages() {
+        const images = document.getElementsByTagName("img");
+        const numImages = images.length;
+        const counter = document.getElementById("image-counter");
+        counter.innerHTML = numImages;
+        }
        
     </script>
    
