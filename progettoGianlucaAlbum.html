@@ -198,6 +198,12 @@
         white-space: nowrap;
         -webkit-overflow-scrolling: touch;
       }
+
+      .jumbotron {
+        margin-top: 5em;
+      }
+      
+    
     
     </style>
 </head>
@@ -218,15 +224,17 @@
                     <a class="nav-link active" aria-current="page" href="#"><p>Home</p></a>
                   </li>
                   <li class="nav-item">
-                    <a class="nav-link active" href="#album_preferiti"><p>Album preferiti</p></a>
+                    <a class="nav-link active mb-1" href="#album_preferiti"><p>Album preferiti</p></a>
                   </li>
                   <li class="nav-item">
-                    <a class="nav-link active" href="#album_non_preferiti"><p>Album che non amo</p></a>
+                    <a class="nav-link active mt-1" href="#album_non_preferiti"><p>Album che non amo</p></a>
                   </li>
                 </ul>
                 <form class="d-flex" role="search">
-                  <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
-                  <button class="btn btn-outline-success" type="submit">Search</button>
+                  <input class="form-control me-2" type="search" placeholder="Cerca" aria-label="Search">
+                  <button class="btn btn-outline-light" type="submit"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-search" viewBox="0 0 16 16">
+                    <path d="M11.742 10.344a6.5 6.5 0 1 0-1.397 1.398h-.001c.03.04.062.078.098.115l3.85 3.85a1 1 0 0 0 1.415-1.414l-3.85-3.85a1.007 1.007 0 0 0-.115-.1zM12 6.5a5.5 5.5 0 1 1-11 0 5.5 5.5 0 0 1 11 0z"/>
+                  </svg></button>
                 </form>
               </div>
             </div>
@@ -234,27 +242,31 @@
 
     </header>
 
-    <main>
+    <section class="text-center container jumbotron">
 
-        <section class="py-5 text-center container">
-            <div class="row py-lg-5">
-                <div class="col-lg-6 col-md-8 mx-auto">
-                    <h1 class="fw-light">La musica che amo</h1>
-                    <p class="lead text-muted">Ciao e benvenuti a tutti! Questo è il mio spazio personale dove esprimo quale musica mi piace, con tanto di album e autori.
-                    </p>
-                    <p>
-                        <a href="#" class="btn btn-primary my-2">Offrimi un caffè</a>
-                        <a href="https://open.spotify.com/user/1168543427?si=12cd5eec853a49f8" class="btn btn-secondary my-2">Vai al mio Spotify!</a>
-                    </p>
-                </div>
+        <div class="row py-lg-5">
+            <div class="col-lg-6 col-md-8 mx-auto ">
+                <h1 class="fw-light">La musica che amo</h1>
+                <p class="lead text-muted">Ciao e benvenuti a tutti! Questo è il mio spazio personale dove esprimo quale musica mi piace, con tanto di album e autori.
+                </p>
+                <p>
+                    <a href="#" class="btn btn-dark my-2">Offrimi un caffè</a>
+                    <a href="https://open.spotify.com/user/1168543427?si=12cd5eec853a49f8" class="btn btn-secondary my-2">Vai al mio Spotify!</a>
+                </p>
             </div>
-        </section>
+        </div>
 
         <div class="album-preferiti">
-            <button id="toggle-button" class="btn btn-primary mb-3">
+            <button id="toggle-button" class="btn btn-dark mb-auto">
                 <a name="album_preferiti"><h2>Album preferiti</h2></a>
             </button>
         </div>
+
+    </section>
+
+    <main>
+
+
 
 
         <div id="album-content" class="album py-5 bg-light">
@@ -486,7 +498,7 @@
 
 
         <div class="album-non-preferiti">
-            <button id="toggle-button-1" class="btn btn-primary mb-3">
+            <button id="toggle-button-1" class="btn btn-secondary mb-3">
                 <a name="album_non_preferiti"><h2>Album che non amo</h2></a>
             </button>
         </div>
